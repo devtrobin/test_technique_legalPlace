@@ -1,7 +1,5 @@
 // Fervex gains benefit as it approaches expiration, then drops to 0 after expiration.
-const increaseBenefit = (drug, amount) => {
-  drug.benefit = Math.min(50, drug.benefit + amount);
-};
+import { decreaseExpiresIn, increaseBenefit } from "../utils";
 
 export const updateBenefitValue = (drug) => {
   increaseBenefit(drug, 1);
@@ -14,7 +12,7 @@ export const updateBenefitValue = (drug) => {
     increaseBenefit(drug, 1);
   }
 
-  drug.expiresIn -= 1;
+  decreaseExpiresIn(drug);
 
   if (drug.expiresIn < 0) {
     drug.benefit = 0;

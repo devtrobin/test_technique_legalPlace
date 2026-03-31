@@ -1,8 +1,10 @@
-import { updateBenefitValue as updateDafalgan } from "./drug-rules/dafalgan";
-import { updateBenefitValue as updateFervex } from "./drug-rules/fervex";
-import { updateBenefitValue as updateHerbalTea } from "./drug-rules/herbal-tea";
-import { updateBenefitValue as updateMagicPill } from "./drug-rules/magic-pill";
-import { updateStandardDrug } from "./drug-rules/standard-drug";
+import {
+  updateDafalgan,
+  updateFervex,
+  updateHerbalTea,
+  updateMagicPill,
+  updateStandardDrug,
+} from "./drug-rules";
 
 export class Drug {
   constructor(name, expiresIn, benefit) {
