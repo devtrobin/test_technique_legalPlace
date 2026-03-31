@@ -21,6 +21,8 @@ describe("Aspirine rule", () => {
   });
 
   it("never has a benefit above 50", () => {
-    expect(updateBenefitValue(new Drug("Aspirine", 10, 50)).benefit).toBeLessThanOrEqual(50);
+    expect(
+      updateBenefitValue(new Drug("Aspirine", 10, 50)).benefit,
+    ).toBeLessThanOrEqual(50);
   });
 });

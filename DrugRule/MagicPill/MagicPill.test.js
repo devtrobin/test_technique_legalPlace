@@ -15,7 +15,9 @@ describe("Magic Pill rule", () => {
   });
 
   it("does not change expiresIn", () => {
-    expect(updateBenefitValue(new Drug("Magic Pill", 15, 40)).expiresIn).toBe(15);
+    expect(updateBenefitValue(new Drug("Magic Pill", 15, 40)).expiresIn).toBe(
+      15,
+    );
   });
 
   it("does not change benefit", () => {

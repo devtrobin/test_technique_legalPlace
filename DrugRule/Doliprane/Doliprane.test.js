@@ -21,6 +21,8 @@ describe("Doliprane rule", () => {
   });
 
   it("never has a benefit above 50", () => {
-    expect(updateBenefitValue(new Drug("Doliprane", 10, 50)).benefit).toBeLessThanOrEqual(50);
+    expect(
+      updateBenefitValue(new Drug("Doliprane", 10, 50)).benefit,
+    ).toBeLessThanOrEqual(50);
   });
 });

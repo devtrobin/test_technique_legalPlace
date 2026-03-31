@@ -111,7 +111,6 @@ describe("Magic Pill", () => {
   });
 });
 
-/*
 describe("Dafalgan", () => {
   it("should decrease the expiration date by 1", () => {
     expect(updateDrug("Dafalgan", 10, 20).expiresIn).toBe(9);
@@ -133,4 +132,3 @@ describe("Dafalgan", () => {
     expect(updateDrug("Dafalgan", 10, 50).benefit).toBeLessThanOrEqual(50);
   });
 });
-*/
