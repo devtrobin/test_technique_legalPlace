@@ -3,7 +3,7 @@ const decreaseBenefit = (drug, amount) => {
   drug.benefit = Math.max(0, drug.benefit - amount);
 };
 
-export const updateBenefitValue = (drug) => {
+export const updateStandardDrug = (drug) => {
   decreaseBenefit(drug, 1);
   drug.expiresIn -= 1;
 
@@ -13,3 +13,5 @@ export const updateBenefitValue = (drug) => {
 
   return drug;
 };
+
+export const updateBenefitValue = updateStandardDrug;

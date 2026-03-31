@@ -1,9 +1,8 @@
-import { updateBenefitValue as updateAspirine } from "./DrugRule/Aspirine";
-import { updateBenefitValue as updateDafalgan } from "./DrugRule/Dafalgan";
-import { updateBenefitValue as updateDoliprane } from "./DrugRule/Doliprane";
-import { updateBenefitValue as updateFervex } from "./DrugRule/Fervex";
-import { updateBenefitValue as updateHerbalTea } from "./DrugRule/HerbalTea";
-import { updateBenefitValue as updateMagicPill } from "./DrugRule/MagicPill";
+import { updateBenefitValue as updateDafalgan } from "./drug-rules/dafalgan";
+import { updateBenefitValue as updateFervex } from "./drug-rules/fervex";
+import { updateBenefitValue as updateHerbalTea } from "./drug-rules/herbal-tea";
+import { updateBenefitValue as updateMagicPill } from "./drug-rules/magic-pill";
+import { updateStandardDrug } from "./drug-rules/standard-drug";
 
 export class Drug {
   constructor(name, expiresIn, benefit) {
@@ -25,14 +24,12 @@ export class Pharmacy {
 
   getRule(name) {
     const rules = {
-      Aspirine: updateAspirine,
       Dafalgan: updateDafalgan,
-      Doliprane: updateDoliprane,
       Fervex: updateFervex,
       "Herbal Tea": updateHerbalTea,
       "Magic Pill": updateMagicPill,
     };
 
-    return rules[name] || updateDoliprane;
+    return rules[name] || updateStandardDrug;
   }
 }
