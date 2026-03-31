@@ -1,3 +1,4 @@
+// Dafalgan follows the standard rule but degrades twice as fast.
 const decreaseBenefit = (drug, amount) => {
   drug.benefit = Math.max(0, drug.benefit - amount);
 };
